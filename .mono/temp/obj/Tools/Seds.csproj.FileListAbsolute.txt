@@ -1,0 +1,5 @@
+C:\Users\sapir\Desktop\Projects\Seds\.mono\temp\obj\Tools\Seds.csprojAssemblyReference.cache
+C:\Users\sapir\Desktop\Projects\Seds\.mono\temp\bin\Tools\Seds.dll
+C:\Users\sapir\Desktop\Projects\Seds\.mono\temp\bin\Tools\Seds.pdb
+C:\Users\sapir\Desktop\Projects\Seds\.mono\temp\obj\Tools\Seds.dll
+C:\Users\sapir\Desktop\Projects\Seds\.mono\temp\obj\Tools\Seds.pdb
