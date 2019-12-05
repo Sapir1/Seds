@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scripts\debris.cs" />
     <Compile Include="scripts\hello_world.cs" />
+    <Compile Include="scripts\platform.cs" />
     <Compile Include="scripts\player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

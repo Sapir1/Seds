@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/debris.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 797.963, 144.156 )
+
+[node name="RigidBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 742.598, 402.524 )
+
+[node name="RigidBody2D3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 453.471, 107.246 )
+
+[node name="RigidBody2D5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 500.634, 275.391 )
+
+[node name="RigidBody2D6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 67.9684, 45.7295 )
+
+[node name="RigidBody2D8" parent="." instance=ExtResource( 1 )]
+position = Vector2( -43.4656, 310.02 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 498.583, 537.86 )
+
+[node name="platform2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1072.08, 533.259 )
+
+[node name="platform3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1302.8, -79.597 )
+
+[node name="platform4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -474.483, 717.116 )
+
+[node name="platform5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6026.49, 3491.73 )
+
+[node name="platform6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3725.46, 1392.25 )
+
+[node name="platform7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 493.252, 534.304 )
+
+[node name="platform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 121.33, 267.671 )

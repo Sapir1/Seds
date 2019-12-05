@@ -5,9 +5,14 @@ using System;
 public class player : KinematicBody2D
 {
     // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
+     Vector2 movement = new Vector2(); //mojimmy actually
+     bool canmove = false;
 
+     int remainingwoahthere = 0;
+
+    
+    
+    
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -22,29 +27,78 @@ public class player : KinematicBody2D
 
     public override void _PhysicsProcess(float delta) 
     {
-        Vector2 movement = new Vector2(); //mojimmy actually
-        if(Input.IsActionPressed("up"))
+        if(remainingwoahthere > 0)
         {
-            movement.y -= 1;
+            -- remainingwoahthere;
+            WoahThere();
+        }
+        if(canmove){
+            if(Input.IsActionPressed("up"))
+            {
+                movement.y -= 1;
+            }
+
+            if(Input.IsActionPressed("down"))
+            {
+                movement.y += 1;
+            }
+
+            if(Input.IsActionPressed("left"))
+            {
+                movement.x -= 1;
+            }
+
+            if(Input.IsActionPressed("right"))
+            {
+                movement.x += 1;
+            }
+        }
+        MoveAndSlide(10*movement);
+    }
+    public void AllowMove()
+    {
+        canmove = true;
+    }
+
+    public void DisallowMove()
+    {
+        canmove = false;
+    }
+
+    public void StopRightThereCriminalIThink()
+    {
+        movement.x = 0;
+        movement.y = 0;
+    }
+
+    public void WoahThere()
+    {
+        if(movement.x > 10 || movement.x < -10) 
+        {
+            movement.x /= 1.03f;
+        }
+        else
+        {
+            movement.x = 0;
         }
 
-        if(Input.IsActionPressed("down"))
+        if(movement.y > 10 || movement.y < -10) 
         {
-            movement.y += 1;
+            movement.y /= 1.03f;
         }
-
-        if(Input.IsActionPressed("left"))
+        else
         {
-            movement.x -= 1;
+            movement.y = 0;
         }
+    }
 
-        if(Input.IsActionPressed("right"))
-        {
-            movement.x += 1;
-        }
+    public void StartWoahThereing()
+    {
+        remainingwoahthere = 70;
+    }
 
-        MoveAndSlide(30*movement);
-
-
+    public void StopWoahThereing()
+    {
+        remainingwoahthere = 0;
     }
 }
